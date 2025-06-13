@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zoho Leads</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="text-align: center;">Zoho CRM Leads</h2>
+    <table>
+        <tr>
+            <th>Lead ID</th>
+            <th>Full Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+        </tr>
+        {% for lead in leads %}
+        <tr>
+            <td>{{ lead.id }}</td>
+            <td>{{ lead.Full_Name }}</td>
+            <td>{{ lead.Email }}</td>
+            <td>{{ lead.Phone }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

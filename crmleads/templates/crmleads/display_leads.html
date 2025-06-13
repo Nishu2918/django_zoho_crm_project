@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Zoho Leads</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; background: white; }
+    th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+    th { background-color: #007bff; color: white; }
+    h2 { color: #333; }
+  </style>
+</head>
+<body>
+  <h2>Zoho CRM Leads</h2>
+
+  {% if leads %}
+    <table>
+      <thead>
+        <tr>
+          <th>Lead ID</th>
+          <th>Full Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for lead in leads %}
+        <tr>
+          <td>{{ lead.id }}</td>
+          <td>{{ lead.Full_Name }}</td>
+          <td>{{ lead.Email }}</td>
+          <td>{{ lead.Phone }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>No leads found.</p>
+  {% endif %}
+</body>
+</html>
