@@ -1,0 +1,59 @@
+Microsoft Windows [Version 10.0.26100.4061]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\Admin>cd C:\Users\Admin\Desktop
+
+C:\Users\Admin\Desktop>mkdir django_zoho_crm_project
+
+C:\Users\Admin\Desktop>cd django_zoho_crm_project
+
+C:\Users\Admin\Desktop\django_zoho_crm_project>python -m venv venv
+
+C:\Users\Admin\Desktop\django_zoho_crm_project>.\venv\Scripts\activate
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>pip install django python-dotenv
+Collecting django
+  Using cached django-5.2.3-py3-none-any.whl.metadata (4.1 kB)
+Collecting python-dotenv
+  Using cached python_dotenv-1.1.0-py3-none-any.whl.metadata (24 kB)
+Collecting asgiref>=3.8.1 (from django)
+  Using cached asgiref-3.8.1-py3-none-any.whl.metadata (9.3 kB)
+Collecting sqlparse>=0.3.1 (from django)
+  Using cached sqlparse-0.5.3-py3-none-any.whl.metadata (3.9 kB)
+Collecting tzdata (from django)
+  Using cached tzdata-2025.2-py2.py3-none-any.whl.metadata (1.4 kB)
+Using cached django-5.2.3-py3-none-any.whl (8.3 MB)
+Using cached python_dotenv-1.1.0-py3-none-any.whl (20 kB)
+Using cached asgiref-3.8.1-py3-none-any.whl (23 kB)
+Using cached sqlparse-0.5.3-py3-none-any.whl (44 kB)
+Using cached tzdata-2025.2-py2.py3-none-any.whl (347 kB)
+Installing collected packages: tzdata, sqlparse, python-dotenv, asgiref, django
+Successfully installed asgiref-3.8.1 django-5.2.3 python-dotenv-1.1.0 sqlparse-0.5.3 tzdata-2025.2
+
+[notice] A new release of pip is available: 25.0.1 -> 25.1.1
+[notice] To update, run: python.exe -m pip install --upgrade pip
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>django-admin startproject crmproject .
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>cd crmproject
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project\crmproject>python ../manage.py startapp crmleads
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project\crmproject>cd ..
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>echo SECRET_KEY=kht6n(k@434-2le4rnf$_rf3xgyc*3ff7^(x0f9l8=tc%@(&!# > .env
+SECRET_KEY=kht6n(k@434-2le4rnf$_rf3xgyc*3ff7(x0f9l8=tc%@(
+'!#' is not recognized as an internal or external command,
+operable program or batch file.
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>echo venv/ > .gitignore
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>echo __pycache__/ >> .gitignore
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>echo *.pyc >> .gitignore
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>mkdir templates
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>code .
+
+(venv) C:\Users\Admin\Desktop\django_zoho_crm_project>
